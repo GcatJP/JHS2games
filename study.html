@@ -13,7 +13,12 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="Adventure Island" />
 
-    <title>Adventure Island: JHS 1</title>
+    <!-- App icons (multiple resolutions) -->
+    <link rel="apple-touch-icon" href="jhs1hp.png" />
+
+    <link rel="manifest" href="manifest.json" />
+
+    <title>Adventure Island: JHS 2</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -65,31 +70,7 @@
         overflow: hidden;
         transition: background 0.3s ease;
       }
-      .back-btn {
-        position: fixed;
-        top: max(16px, env(safe-area-inset-top, 16px));
-        left: max(16px, env(safe-area-inset-left, 16px));
-        z-index: 60;
-        display: flex;
-        align-items: center;
-        gap: 0.3em;
-        background: grey;
-        color: black;
-        border: 2px solid var(--colour-btn-border);
-        border-radius: 999px;
-        padding: 0.4em 0.9em;
-        font-family: var(--font-chalk);
-        font-weight: bold;
-        font-size: 1rem;
-        text-decoration: none;
-        cursor: pointer;
-        -webkit-text-stroke: 0;
-        transition: transform 0.1s ease;
-      }
-      .back-btn:active {
-        transform: translateY(2px);
-        background: var(--colour-btn-active);
-      }
+
       h1 {
         font-family: var(--font-chalk);
         color: var(--colour-heading-text);
@@ -127,7 +108,7 @@
         overflow: hidden;
         -webkit-user-select: none;
         user-select: none;
-        -webkit-text-stroke: 1px darkorange;
+        -webkit-text-stroke: 2px darkorange;
         transition:
           transform 0.1s ease,
           background 0.15s ease;
@@ -153,7 +134,31 @@
         pointer-events: none;
         user-select: none;
       }
-
+      .back-btn {
+        position: fixed;
+        top: max(16px, env(safe-area-inset-top, 16px));
+        left: max(16px, env(safe-area-inset-left, 16px));
+        z-index: 60;
+        display: flex;
+        align-items: center;
+        gap: 0.3em;
+        background: yellow;
+        color: var(--colour-btn-border);
+        border: 2px solid var(--colour-btn-border);
+        border-radius: 999px;
+        padding: 0.4em 0.9em;
+        font-family: var(--font-chalk);
+        font-weight: bold;
+        font-size: 1rem;
+        text-decoration: none;
+        cursor: pointer;
+        -webkit-text-stroke: 0;
+        transition: transform 0.1s ease;
+      }
+      .back-btn:active {
+        transform: translateY(2px);
+        background: var(--colour-btn-active);
+      }
       /* LANDSCAPE */
       @media screen and (orientation: landscape) {
         body {
@@ -285,16 +290,19 @@
   </head>
 
   <body>
-    <h1>Grammar</h1>
-    <a class="back-btn" href="study.html">← Back</a>
+    <a class="back-btn" href="index.html">← Back</a>
+    <h1>Adventure Island: JHS2</h1>
+
     <div class="grid-wrapper">
       <div class="grid" id="main-grid">
-        <a class="btn" href="right.html" style="background-color: #8b5a2b">
-          <span class="btn-text">Right or Wrong</span>
+        <a class="btn" href="vocab.html" style="background-color: #8b5a2b">
+          <span class="btn-text">Vocabulary</span>
+          <img class="btn-icon" src="s1.png" alt="" />
         </a>
 
-        <a class="btn" href="missing.html" style="background-color: #8b5a2b">
-          <span class="btn-text">Missing Word</span>
+        <a class="btn" href="grammar.html" style="background-color: #8b5a2b">
+          <span class="btn-text">Grammar</span>
+          <img class="btn-icon" src="k1.png" alt="" />
         </a>
       </div>
     </div>
